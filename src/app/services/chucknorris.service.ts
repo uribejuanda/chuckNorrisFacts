@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/timer';
 
 import { Fact } from '../models/fact';
 
@@ -15,7 +15,7 @@ export class ChucknorrisService {
     constructor( private http: HttpClient ) { }
 
     getFact() {
-        return Observable.interval(3000)
+        return Observable.timer(0, 3000)
             .switchMap(
                 () => this.http.get(this.urlBase)
             ).map(
