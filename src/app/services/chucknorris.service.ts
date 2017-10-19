@@ -15,7 +15,7 @@ export class ChucknorrisService {
     constructor( private http: HttpClient ) { }
 
     getFact() {
-        return Observable.timer(0, 3000)
+        return Observable.timer(0, 6000)
             .switchMap(
                 () => this.http.get(this.urlBase)
             ).map(
