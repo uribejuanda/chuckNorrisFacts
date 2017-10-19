@@ -166,7 +166,7 @@ var ChucknorrisService = (function () {
     }
     ChucknorrisService.prototype.getFact = function () {
         var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].timer(0, 3000)
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].timer(0, 6000)
             .switchMap(function () { return _this.http.get(_this.urlBase); }).map(function (data) { return data.value; });
     };
     return ChucknorrisService;
